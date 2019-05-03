@@ -1,0 +1,41 @@
+.result {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.result div {
+  height: fit-content;
+}
+.result .number {
+  color: black;
+  background: white;
+  border-radius: 50%;
+  width: 24px;
+  text-align: center;
+  margin: 0 5px;
+}
+.empty {
+  background: #4b4149;
+}
+.filled {
+  background: #de474b;
+}
+ul {
+  list-style-type: none;
+  margin: 10px 0;
+  padding: 0;
+}
+.cart {
+  background: white;
+  padding: 5px 15px;
+  margin: 10px;
+  border-radius: 20px;
+}
+.cart a {
+  font-size: 80%;
+  color: black;
+  text-decoration: none;
+}

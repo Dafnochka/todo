@@ -1,0 +1,27 @@
+.Goods__Header {
+  display: flex;
+  border-bottom: #4b4149 solid 1px;
+  padding: 10px 0;
+  color: #685d66;
+}
+.Goods__Header .idField {
+  width: 10%;
+}
+.Goods__Header .name {
+  width: 30%;
+}
+.Goods__Header .rating {
+  width: 10%;
+}
+.Goods__Header .trand {
+  width: 10%;
+}
+.Goods__Header .priceSegment {
+  width: 20%;
+}
+.Goods__Header .comments {
+  width: 10%;
+}
+.Goods__Header .checked {
+  width: 10%;
+}

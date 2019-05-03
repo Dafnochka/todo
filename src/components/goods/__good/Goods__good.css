@@ -1,0 +1,46 @@
+.Goods__good {
+  display: flex;
+  border-bottom: #4b4149 solid 1px;
+  padding: 10px 0;
+}
+.Goods__good .idField {
+  width: 10%;
+}
+.Goods__good .name {
+  width: 30%;
+}
+.Goods__good .rating {
+  width: 10%;
+  color: gray;
+}
+.Goods__good .trand {
+  width: 10%;
+  color: #00a900;
+}
+.Goods__good .priceSegment {
+  width: 20%;
+}
+.Goods__good .priceSegment .segment {
+  border: #bfbfbf solid 1px;
+  border-radius: 15px;
+  padding: 0 10px;
+  width: fit-content;
+}
+.Goods__good .comments {
+  width: 10%;
+  color: orange;
+}
+.Goods__good .comments svg {
+  color: #bababa;
+}
+.Goods__good .checked {
+  width: 10%;
+  padding: 0 3%;
+}
+.Goods__good .checked svg {
+  color: #bababa;
+  cursor: pointer;
+}
+.Goods__good .checked .fa-check-square {
+  color: #de474b;
+}

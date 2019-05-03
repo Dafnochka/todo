@@ -1,0 +1,41 @@
+.Layout{
+    margin: 10px;
+}
+.loading{
+    position: absolute;
+    background: rgba(191, 191, 191, 0.49);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.titles{
+    margin-top: 50px;
+    display: flex;
+}
+
+footer{
+    margin-top: 50px;
+}
+
+.description{
+  width: 40%;
+}
+
+.assignee{
+    width: 20%
+}
+
+.assign{
+    width: 40%;
+display: flex;
+    justify-content: space-around;
+}
+
+.row{
+    display: flex;
+}
