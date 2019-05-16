@@ -40,35 +40,37 @@ class Layout extends React.Component {
             <div>
                 Test Task of Daria Guketleva. TODO list
             </div>
-            <div className="titles">
-                <div className="description">Description (click to complete)</div>
-                <div className="assignee">Assignee</div>
-                <div className="assign">Assign to</div>
-            </div>
-            {this.props.tasksData.tasks && this.props.tasksData.tasks.map((task) =>
-                <div className={'row'}>
-                    <div
-                        className="description"
-                        style={{color: task.completed ? 'green' : 'red',}}
-                        onClick={() => this.complete(task.id)}
-                    >
-                        {task.description}</div>
-                    <div className="assignee">{this.props.usersData && this.props.usersData.users &&
-                    task.assigneeId && this.props.usersData.users[task.assigneeId] &&
-                    this.props.usersData.users[task.assigneeId].name}</div>
-                    <div className="assign">
-                        {this.renderUserList(task.id)}
-                  </div>
+            <div className="container">
+                <div className="titles">
+                    <div className="description">Description (click to complete)</div>
+                    <div className="assignee">Assignee</div>
+                    <div className="assign">Assign to (click to choose)</div>
                 </div>
-            )}
-            <form onSubmit={this.handleSubmit}>
-                <input
-                    type="text"
-                    value={this.state.nextTask}
-                    onChange={this.handleChange}
-                />
-                <button>add</button>
-            </form>
+                {this.props.tasksData.tasks && this.props.tasksData.tasks.map((task) =>
+                    <div className={'row'}>
+                        <div
+                            className="description"
+                            style={{color: task.completed ? 'green' : 'red',}}
+                            onClick={() => this.complete(task.id)}
+                        >
+                            {task.description}</div>
+                        <div className="assignee">{this.props.usersData && this.props.usersData.users &&
+                        task.assigneeId && this.props.usersData.users[task.assigneeId] &&
+                        this.props.usersData.users[task.assigneeId].name}</div>
+                        <div className="assign">
+                            {this.renderUserList(task.id)}
+                        </div>
+                    </div>
+                )}
+                <form onSubmit={this.handleSubmit}>
+                    <input
+                        type="text"
+                        value={this.state.nextTask}
+                        onChange={this.handleChange}
+                    />
+                    <button>add</button>
+                </form>
+            </div>
             {this.props.tasksData.loading && <div className={'loading'}>LOADING</div>}
 
             <footer className="card-footer">
@@ -82,10 +84,10 @@ class Layout extends React.Component {
         this.fetchData();
     }
 
-    renderUserList (taskId){
+    renderUserList(taskId) {
         const users = [];
-        if (this.props.usersData){
-            for (let i in this.props.usersData.users){
+        if (this.props.usersData) {
+            for (let i in this.props.usersData.users) {
                 users.push(<div
                     onClick={() => this.props.dispatch(Tasks.assign(taskId, +i))}>
                     {this.props.usersData.users[i].name}</div>)
